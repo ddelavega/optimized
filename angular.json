@@ -3,5 +3,91 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "syncro": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/syncro",
+      "sourceRoot": "projects/syncro/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/syncro",
+            "index": "projects/syncro/src/index.html",
+            "browser": "projects/syncro/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/syncro/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": ["projects/syncro/src/styles.scss"],
+            "scripts": [],
+            "server": "projects/syncro/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/syncro/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "syncro:build:production"
+            },
+            "development": {
+              "buildTarget": "syncro:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/syncro/tsconfig.spec.json",
+            "inlineStyleLanguage": ["scss"],
+            "assets": ["public"],
+            "styles": ["projects/syncro/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    }
   }
 }
