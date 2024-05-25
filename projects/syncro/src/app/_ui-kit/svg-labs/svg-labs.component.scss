@@ -1,0 +1,36 @@
+.service__block__img {
+  text-align: center;
+  svg,
+  img {
+    width: 80%;
+    filter: grayscale(0%);
+    box-shadow: unset;
+  }
+}
+
+.service__block {
+  text-align: center;
+  svg,
+  img {
+    width: 12rem;
+    padding: 1.8rem;
+    filter: grayscale(0%);
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+}
+
+.service__divide {
+  display: grid;
+  grid-template-columns: var(--grid-skills-width);
+}
+
+.service__block__inside {
+  margin-inline: auto;
+  height: 14rem;
+  padding: 1rem 0;
+  svg {
+    max-height: 10rem;
+  }
+}
