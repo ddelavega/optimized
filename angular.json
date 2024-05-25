@@ -27,7 +27,9 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "projects/syncro/src/assets",
+              "projects/syncro/src/manifest.webmanifest"
             ],
             "styles": ["projects/syncro/src/styles.scss"],
             "scripts": [],
@@ -51,7 +53,8 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "projects/syncro/ngsw-config.json"
             },
             "development": {
               "optimization": false,
@@ -82,7 +85,11 @@
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/syncro/tsconfig.spec.json",
             "inlineStyleLanguage": ["scss"],
-            "assets": ["public"],
+            "assets": [
+              "public",
+              "projects/vitae/src/assets",
+              "projects/vitae/src/manifest.webmanifest"
+            ],
             "styles": ["projects/syncro/src/styles.scss"],
             "scripts": []
           }
