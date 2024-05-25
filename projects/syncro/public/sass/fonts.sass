@@ -1,0 +1,162 @@
+@import "./modules/_fonts"
+:root
+  --primary-font: $primary_font
+  --secondary-font: $primary_font
+  --terciary-font: $primary_font
+
+$primary_font: "Poppins", sans-serif
+$secondary_font: "Open Sans", sans-serif
+$terciary_font: "Montserrat", sans-serif
+
+$light: 300
+$regular: 400
+$med: 500
+$semi: 600
+$bold: 800
+
+body
+  // background: red
+  font-size: 16px
+  line-height: 30px
+  *
+    font-family: $secondary_font
+    font-weight: $regular
+
+.text-primary
+  font-family: $primary_font
+
+.text-secondary
+  font-family: $secondary_font
+
+.font-normal
+  font-weight: $regular
+
+.font-bold
+  font-weight: $bold
+
+.font-semi
+  font-weight: $semi
+
+.font-med
+  font-weight: $med
+
+.font-light
+  font-weight: $light
+
+.mat-mdc-menu-content
+  background: rgba(0,0,0,0.3)
+
+.mat-mdc-menu-panel
+  // border: 3px solid rgba(0,0,0,0.3)
+  border-right: 3px solid #00ffff
+
+
+.mat-mdc-menu-item
+  justify-content: flex-end
+  padding: .5rem 1rem
+  &:hover
+    padding: .5rem .5rem .5rem 1.5rem
+    color: #00ffff
+
+.nav, .menu
+  &.opened
+    .nav-item.nav-link
+      font-size: 1.25rem
+      color: rgba(#00ffff,.6)
+      margin-left: 0
+      transition: .4s
+      &:hover
+        margin-left: 1.2rem
+        transition: .3s
+      &.active
+        color: rgba(#00ffff, 1)
+        strong
+          color: rgba(#f1f1f1,1)
+
+      strong
+        font-weight: $bold
+        font-family: $primary_font
+        color: rgba(#f1f1f1,.6)
+
+  .nav-item.nav-link
+    font-size: 1.25rem
+    color: rgba(#00ffff,.6)
+    &.active
+      color: rgba(#00ffff, 1)
+      strong
+        color: rgba(#f1f1f1,1)
+
+    strong
+      font-weight: $bold
+      font-family: $primary_font
+      color: rgba(#f1f1f1,.6)
+.menu
+  padding: 1rem 0
+  li
+    padding: 1rem
+.text-start
+  display: block
+  text-align: left
+  border-left: 3px solid #32b8b8
+
+.text-end
+  text-align: right
+  display: block
+  border-right: 3px solid #32b8b8
+
+.text-small
+  font-size: .8rem
+  padding: 1rem
+
+.text-error
+  padding: 1rem
+
+.title
+  display: block
+  font-weight: 700
+  font-size: clamp(1.5rem, 16vw, 2.4rem)
+  padding: 0.5rem 1rem
+  // color: rgba(#444444,1)
+  font-family: $primary_font
+  font-weight: $bold
+  // max-width: 12ch
+  line-height: clamp(3.5rem, 18vw, 2.4rem)
+  &.main-titles
+    font-size: clamp(2.8rem, 16vw, 3.4rem)
+  &.adapted-titles
+    font-size: clamp(2rem, 16vw, 2.2rem)
+
+.short-title
+  // display: block
+  // font-weight: 700
+  // font-size: clamp(1.5rem, 16vw, 4rem)
+  // padding: 0.5rem 1rem
+  // // color: rgba(#444444,1)
+  font-family: inherit
+  font-weight: inherit
+  max-width: 12ch
+
+.title-small
+  font-weight: 700
+  font-size: clamp(1rem, 16vw, 1.3rem)
+  // padding: 0.5rem 1rem
+  // color: rgba(#444444,1)
+  font-family: $primary_font
+  font-weight: $bold
+.title-medium
+  font-weight: 700
+  font-size: clamp(1.4rem, 16vw, 1.6rem)
+  // padding: 0.5rem 1rem
+  // color: rgba(#444444,1)
+  font-family: $primary_font
+  font-weight: $bold
+  // max-width: 12ch
+.balanced
+  // max-width: 13ch
+  text-wrap: balance
+
+.texts
+  font-size: 4rem
+  font-weight: $light
+  font-family: $secondary_font
+

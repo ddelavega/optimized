@@ -1,0 +1,102 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+// variables to apply in local
+$semi-light-bg-color: #f1f1f1;
+$light-text-color: #f1f1f1;
+$semi-dark-bg-color: #222;
+$dark-text-color: #222;
+$anim-border-color: #32b8b8;
+
+// Define a dark theme
+$dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: mat.$cyan-palette,
+      tertiary: mat.$blue-palette
+    )
+  )
+);
+
+// Define a light theme
+$light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$cyan-palette,
+      tertiary: mat.$blue-palette
+    )
+  )
+);
+:root {
+  // variables to apply in all component
+  // for light
+  --dark-bg-color: #263238;
+  --dark-color-primary: #cfd8dc;
+  // for dark
+  --light-bg-color: #cfd8dc;
+  --light-color-primary: #263238;
+}
+
+html {
+  // Apply the light theme only when the user prefers light themes.
+  @media (prefers-color-scheme: light) {
+    @include mat.core-color($light-theme);
+    @include mat.button-color($light-theme);
+  }
+  .light {
+    @include mat.core-color($light-theme);
+    @include mat.button-color($light-theme);
+    transition: 0.6s;
+    color: var(--light-color-primary);
+    background-color: #f5f5f5;
+    .contact {
+      color: #f5f5f5;
+    }
+    .default {
+      background-color: var(--dark-bg-color);
+    }
+    .anim-border {
+      transition: 0.3s;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      background-color: #32b8b8;
+      background: linear-gradient(90deg, rgba(241, 241, 241, 0) 0%, #32b8b8 100%);
+    }
+  }
+  .dark {
+    @include mat.core-theme($dark-theme);
+    @include mat.button-theme($dark-theme);
+    transition: 0.6s;
+    color: var(--dark-color-primary);
+    background-color: $semi-dark-bg-color;
+    .default {
+      background-color: var(--light-bg-color);
+    }
+    .light {
+      fill: $light-text-color;
+    }
+    .dark {
+      fill: var(--dark-color-primary);
+    }
+    .dark-stroke {
+      stroke: var(--dark-color-primary);
+    }
+
+    .anim-border {
+      border-top: 1px solid $anim-border-color;
+      border-bottom: 1px solid $anim-border-color;
+      background-color: #000;
+      background: linear-gradient(90deg, rgba(241, 241, 241, 0) 0%, #000 100%);
+    }
+    .skill__block {
+      &:hover {
+        .rate {
+          transition: 0.6s;
+          color: #5aebeb;
+        }
+      }
+    }
+  }
+}

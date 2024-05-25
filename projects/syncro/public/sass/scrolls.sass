@@ -1,0 +1,28 @@
+// scroll
+/* width */
+::-webkit-scrollbar
+  width: .6rem !important
+  height: .6rem !important
+
+/* Track */
+::-webkit-scrollbar-track
+  width: .6rem !important
+  height: .6rem !important
+  margin: 0px 4px
+  // background-color: #fbfbfb !important
+
+/* Handle */
+::-webkit-scrollbar-thumb
+  background-color: rgba(#32b8b8,1) !important
+  // cursor: pointer
+  transition: .3s
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+  background-color: #32b8b8 !important
+  // cursor: pointer
+
+// Scroll Firefox definir clases que van a llevar scroll
+.content-res, .sidebar-res nav, .table-responsive, #listados
+  scrollbar-width: thin
+    // border-right: 3px solid #32b8b8;

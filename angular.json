@@ -26,10 +26,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              },
-              "projects/syncro/src/assets",
-              "projects/syncro/src/manifest.webmanifest"
+                "input": "projects/syncro/public"
+              }
             ],
             "styles": ["projects/syncro/src/styles.scss"],
             "scripts": [],
@@ -86,9 +84,10 @@
             "tsConfig": "projects/syncro/tsconfig.spec.json",
             "inlineStyleLanguage": ["scss"],
             "assets": [
-              "public",
-              "projects/vitae/src/assets",
-              "projects/vitae/src/manifest.webmanifest"
+              {
+                "glob": "**/*",
+                "input": "projects/syncro/public"
+              }
             ],
             "styles": ["projects/syncro/src/styles.scss"],
             "scripts": []

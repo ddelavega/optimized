@@ -1,4 +1,9 @@
-<router-outlet />
-{{title}}
-<button routerLink="" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">home</button>
-<a routerLink="sections" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">syncro</a>
+<div class="main__container" [class]="themeService.themeSignal()">
+  {{title}}
+  <button routerLink="" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">home</button>
+  <a routerLink="sections" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">syncro</a>
+
+  <app-theme-mode />
+  <app-fullscreen />
+  <router-outlet />
+</div>

@@ -1,0 +1,63 @@
+:root {
+  --grid-container-width: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  --grid-profile-card: repeat(auto-fit, minmax(min(100%, 19.74rem), 1fr));
+  --grid-skills-width: repeat(auto-fit, minmax(min(100%, 19.74rem), 1fr));
+  --grid-mobile-width: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+  --grid-complete-width: repeat(auto-fit, minmax(min(100%, 36rem), 1fr));
+  --container-width: min(100%, 12rem); // min(100%, 12rem), 1fr
+  --container-pic-width: minmax(min(100%, 12rem), 1fr); // min(100%, 12rem), 1fr
+  --gallery-pic-width: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); // min(100%, 12rem), 1fr
+  --forma-input-width: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); // min(100%, 12rem), 1fr
+  --container-minmax-width: minmax(min(100%, 12rem), 1fr); // min(100%, 12rem), 1fr
+  --main-section-width: minmax(min(80%, 12rem), 80%); // min(100%, 12rem), 1fr
+  --container-height: calc(100vh - 5rem); // min(100%, 12rem), 1fr
+  --gallery-container-height: calc(80vh - 13rem); // min(100%, 12rem), 1fr
+  --gallery-container-width: minmax(min(100%, 12rem), 1fr); // min(100%, 12rem), 1fr
+  --services-blocks-width: repeat(auto-fit, minmax(min(100%, 32rem), 1fr)); // min(100%, 12rem), 1fr
+}
+
+html {
+  width: 100%;
+}
+
+html * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+  outline: 0;
+  outline-color: transparent;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:active,
+a.active {
+  color: #32b8b8;
+}
+
+button,
+button:focus {
+  outline: 0;
+  transition: 0.3s;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
