@@ -80,9 +80,7 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/syncro/tsconfig.spec.json",
-            "inlineStyleLanguage": ["scss"],
             "assets": [
               {
                 "glob": "**/*",

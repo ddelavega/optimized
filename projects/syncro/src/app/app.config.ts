@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideExperimentalCheckNoChangesForDebug, provideZoneChangeDetection, isDevMode } from '@angular/core';
-import { provideRouter, withComponentInputBinding, withViewTransitions } from '@angular/router';
+import { provideRouter, withComponentInputBinding, withInMemoryScrolling, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -9,7 +9,12 @@ import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }),
-  provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
+  provideRouter(
+    routes,
+    withComponentInputBinding(),
+    withViewTransitions(),
+    withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
+  ),
   // provideExperimentalCheckNoChangesForDebug(
   //   {
   //     interval: 1000,
