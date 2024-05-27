@@ -1,0 +1,49 @@
+.main-container {
+  width: 100%;
+  background-color: aquamarine;
+}
+.main-header {
+  background-color: red;
+  height: var(--header-height);
+  position: sticky;
+  display: grid;
+  grid-template-columns: var(--logo-width) auto;
+  .logo {
+    background-color: lime;
+  }
+}
+.main-navbar {
+  background-color: orange;
+}
+.sidenav {
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  width: var(--navbar-width);
+  height: 100vh;
+  transition: 0.6s;
+  z-index: 1;
+  border: 2px solid red;
+  overflow: hidden;
+  overflow-y: auto;
+  &.open {
+    background-color: #f5f5f5;
+    left: 0;
+  }
+  &.close {
+    left: -100%;
+    transition: 0.3s;
+  }
+}
+
+.main-section {
+  height: var(--main-section-height);
+  position: relative;
+  background-color: green;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.content {
+  height: 100vh;
+  background: pink;
+}

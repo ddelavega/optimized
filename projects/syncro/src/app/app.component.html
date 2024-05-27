@@ -1,9 +1,45 @@
 <div class="main__container" [class]="themeService.themeSignal()">
-  {{title}}
-  <button routerLink="" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">home</button>
-  <a routerLink="sections" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">syncro</a>
+  <header class="main-header">
+    <div class="logo">
+      {{title}}
+    </div>
 
-  <app-theme-mode />
-  <app-fullscreen />
-  <router-outlet />
+    <nav class="main-navbar">
+      <button routerLink="" routerLinkActive="router-link-active"
+        [routerLinkActiveOptions]="{ exact: true }">home</button>
+      <a routerLink="sections" routerLinkActive="router-link-active"
+        [routerLinkActiveOptions]="{ exact: true }">syncro</a>
+      <app-theme-mode />
+      <app-fullscreen />
+      <a class="icon-box" (click)="toggleSidenav()">
+        @if (sidenavService.sidenavSignal() === 'close') {
+        open
+        } @else {
+        close
+        }
+      </a>
+    </nav>
+  </header>
+  <section class="main-section" (click)="sidenavService.setNavStatus('close')">
+    <router-outlet />
+    <section class="content">
+
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis cum asperiores sunt aspernatur id deserunt
+      consequatur quibusdam nesciunt magnam ea. Autem totam officia cum, doloribus fuga alias ullam aut a.
+    </section>
+  </section>
+  <div class="sidenav" [class]="sidenavService.sidenavSignal()">
+    <a href="#">hol</a>
+    <a href="#">hol</a>
+    <a href="#">hol</a>
+    <a href="#">hol</a>
+    <a class="icon-box" (click)="toggleSidenav()">
+      @if (sidenavService.sidenavSignal() === 'close') {
+      open
+      } @else {
+      close
+      }
+    </a>
+  </div>
 </div>
+<!-- (click)="sidenavService.setNavStatus('open')" -->

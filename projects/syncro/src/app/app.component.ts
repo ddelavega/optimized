@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { ThemeService } from './_services';
+import { SidenavService, ThemeService } from './_services';
 import { FullscreenComponent, ThemeModeComponent } from './_ux-kit';
 
 @Component({
@@ -13,4 +13,9 @@ import { FullscreenComponent, ThemeModeComponent } from './_ux-kit';
 export class AppComponent {
   title = 'syncro';
   themeService: ThemeService = inject(ThemeService);
+  sidenavService: SidenavService = inject(SidenavService);
+
+  toggleSidenav() {
+    this.sidenavService.updateNavStatus();
+  }
 }
