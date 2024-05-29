@@ -6,8 +6,7 @@ import { ThemeService } from '../_services';
   selector: 'app-theme-mode',
   standalone: true,
   imports: [],
-  template: `<span class="nav-item nav-link">
-  <strong>
+  template: `
     <a class="icon-box" (click)="toggleTheme()">
       @if (themeService.themeSignal() === 'dark') {
       <i class="icon ico-dark-mode night"></i>
@@ -15,9 +14,11 @@ import { ThemeService } from '../_services';
       <i class="icon ico-light-mode"></i>
       }
     </a>
-  </strong>
-</span>`,
+`,
   styles: `// Color of icon
+  a{
+    cursor: pointer;
+  }
   .night {
   text-shadow: 0rem 0rem 10px rgba(0, 255, 255, 1);
   color: rgba(0, 255, 255, 1);

@@ -3,11 +3,16 @@
   --primary-font: $primary_font
   --secondary-font: $primary_font
   --terciary-font: $primary_font
+  --light-font: $light
+  --regular-font: $regular
+  --med-font: $med
+  --semi-font: $semi
+  --bold-font: $bold
 
+  // --red-color: #f00
 $primary_font: "Poppins", sans-serif
 $secondary_font: "Open Sans", sans-serif
 $terciary_font: "Montserrat", sans-serif
-
 $light: 300
 $regular: 400
 $med: 500
@@ -18,9 +23,13 @@ body
   // background: red
   font-size: 16px
   line-height: 30px
-  *
-    font-family: $secondary_font
-    font-weight: $regular
+  .main-section
+    *
+      font-family: $secondary_font
+      font-weight: $regular
+  .nav-menu
+    font-family: $primary_font
+    font-weight: $bold
 
 .text-primary
   font-family: $primary_font

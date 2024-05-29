@@ -4,21 +4,12 @@
       {{title}}
     </div>
 
-    <nav class="main-navbar">
-      <button routerLink="" routerLinkActive="router-link-active"
-        [routerLinkActiveOptions]="{ exact: true }">home</button>
-      <a routerLink="sections" routerLinkActive="router-link-active"
-        [routerLinkActiveOptions]="{ exact: true }">syncro</a>
-      <app-theme-mode />
-      <app-fullscreen />
-      <a class="icon-box" (click)="toggleSidenav()">
-        @if (sidenavService.sidenavSignal() === 'close') {
-        open
-        } @else {
-        close
-        }
-      </a>
-    </nav>
+    <div class="main-navbar">
+      <app-nav [device]="'desktop'" />
+
+
+
+    </div>
   </header>
   <section class="main-section" (click)="sidenavService.setNavStatus('close')">
     <router-outlet />
@@ -29,17 +20,7 @@
     </section>
   </section>
   <div class="sidenav" [class]="sidenavService.sidenavSignal()">
-    <a href="#">hol</a>
-    <a href="#">hol</a>
-    <a href="#">hol</a>
-    <a href="#">hol</a>
-    <a class="icon-box" (click)="toggleSidenav()">
-      @if (sidenavService.sidenavSignal() === 'close') {
-      open
-      } @else {
-      close
-      }
-    </a>
+    <app-nav />
   </div>
 </div>
 <!-- (click)="sidenavService.setNavStatus('open')" -->

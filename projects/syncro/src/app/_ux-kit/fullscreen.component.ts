@@ -6,17 +6,18 @@ import { MatIcon } from '@angular/material/icon';
   selector: 'app-fullscreen',
   standalone: true,
   imports: [NgIf, MatIcon],
-  template: `<span class="nav-item nav-link">
-  <strong>
+  template: `
     <a class="icon-box" (click)="!isFullScreen ? openFullscreen() : closeFullscreen()">
       @if (!isFullScreen) {
       <i class="icon ico-fullscreen"></i>
       } @else {
       <i class="icon ico-exit-fullscreen"></i>
       }
-    </a>
-  </strong>
-</span>`
+    </a>`,
+  styles: `
+  a{
+    cursor: pointer;
+  }`
 })
 export class FullscreenComponent implements OnInit {
   elem: any;
