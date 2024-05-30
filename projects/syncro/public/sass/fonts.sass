@@ -23,13 +23,15 @@ body
   // background: red
   font-size: 16px
   line-height: 30px
-  .main-section
-    *
-      font-family: $secondary_font
-      font-weight: $regular
-  .nav-menu, .logo
-    font-family: $primary_font
-    font-weight: $bold
+
+.nav-menu, .logo
+  font-family: $primary_font
+  font-weight: $bold
+
+.main-section
+  *
+    font-family: $secondary_font
+    font-weight: $regular
 
 
 .text-primary
@@ -53,53 +55,6 @@ body
 .font-light
   font-weight: $light
 
-.mat-mdc-menu-content
-  background: rgba(0,0,0,0.3)
-
-.mat-mdc-menu-panel
-  // border: 3px solid rgba(0,0,0,0.3)
-  border-right: 3px solid #00ffff
-
-
-.mat-mdc-menu-item
-  justify-content: flex-end
-  padding: .5rem 1rem
-  &:hover
-    padding: .5rem .5rem .5rem 1.5rem
-    color: #00ffff
-
-.nav, .menu
-  &.opened
-    .nav-item.nav-link
-      font-size: 1.25rem
-      color: rgba(#00ffff,.6)
-      margin-left: 0
-      transition: .4s
-      &:hover
-        margin-left: 1.2rem
-        transition: .3s
-      &.active
-        color: rgba(#00ffff, 1)
-        strong
-          color: rgba(#f1f1f1,1)
-
-      strong
-        font-weight: $bold
-        font-family: $primary_font
-        color: rgba(#f1f1f1,.6)
-
-  .nav-item.nav-link
-    font-size: 1.25rem
-    color: rgba(#00ffff,.6)
-    &.active
-      color: rgba(#00ffff, 1)
-      strong
-        color: rgba(#f1f1f1,1)
-
-    strong
-      font-weight: $bold
-      font-family: $primary_font
-      color: rgba(#f1f1f1,.6)
 .menu
   padding: 1rem 0
   li
@@ -170,3 +125,51 @@ body
   font-weight: $light
   font-family: $secondary_font
 
+
+.mat-mdc-menu-content
+  background: rgba(0,0,0,0.3)
+
+.mat-mdc-menu-panel
+  // border: 3px solid rgba(0,0,0,0.3)
+  border-right: 3px solid #00ffff
+
+
+.mat-mdc-menu-item
+  justify-content: flex-end
+  padding: .5rem 1rem
+  &:hover
+    padding: .5rem .5rem .5rem 1.5rem
+    color: #00ffff
+
+.nav, .menu
+  &.opened
+    .nav-item.nav-link
+      font-size: 1.25rem
+      color: rgba(#00ffff,.6)
+      margin-left: 0
+      transition: .4s
+      &:hover
+        margin-left: 1.2rem
+        transition: .3s
+      &.active
+        color: rgba(#00ffff, 1)
+        strong
+          color: rgba(#f1f1f1,1)
+
+      strong
+        font-weight: $bold
+        font-family: $primary_font
+        color: rgba(#f1f1f1,.6)
+
+  .nav-item.nav-link
+    font-size: 1.25rem
+    color: rgba(#00ffff,.6)
+    &.active
+      color: rgba(#00ffff, 1)
+      strong
+        color: rgba(#f1f1f1,1)
+
+    strong
+      font-weight: $bold
+      font-family: $primary_font
+      color: rgba(#f1f1f1,.6)

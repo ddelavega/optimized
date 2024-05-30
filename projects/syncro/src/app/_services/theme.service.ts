@@ -10,7 +10,7 @@ export class ThemeService {
     this.themeSignal.set(theme);
   }
   updateTheme() {
-    console.log('update theme');
+
     this.themeSignal.update((value) => value === 'dark' ? 'light' : 'dark');
   }
 }

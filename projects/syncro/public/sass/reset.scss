@@ -14,6 +14,7 @@
   --gallery-container-height: calc(80vh - 13rem); // min(100%, 12rem), 1fr
   --gallery-container-width: minmax(min(100%, 12rem), 1fr); // min(100%, 12rem), 1fr
   --services-blocks-width: repeat(auto-fit, minmax(min(100%, 32rem), 1fr)); // min(100%, 12rem), 1fr
+
   --navbar-width: min(100%, 16rem); // min(100%, 12rem), 1fr
   --header-height: 5rem;
   --main-section-height: calc(100vh - var(--header-height));
