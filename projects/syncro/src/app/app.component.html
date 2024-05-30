@@ -1,20 +1,19 @@
 <div class="main__container" [class]="themeService.themeSignal()">
   <header class="main-header">
     <div class="logo">
-      {{title}}
+      <strong>
+        <a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+          {{title}}+
+        </a>
+      </strong>
     </div>
-
     <div class="main-navbar">
       <app-nav [device]="'desktop'" />
-
-
-
     </div>
   </header>
   <section class="main-section" (click)="sidenavService.setNavStatus('close')">
     <router-outlet />
     <section class="content">
-
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis cum asperiores sunt aspernatur id deserunt
       consequatur quibusdam nesciunt magnam ea. Autem totam officia cum, doloribus fuga alias ullam aut a.
     </section>

@@ -1,29 +1,3 @@
-<!-- <p>nav works!</p>
-<a href="#">hol</a>
-<a href="#">hol</a>
-<a href="#">hol</a>
-<a href="#">hol</a> -->
-<!-- <a class="icon-box" (click)="toggleSidenav()">
-  @if (sidenavService.sidenavSignal() === 'close') {
-  open
-  } @else {
-  close
-  }
-</a> -->
-<!--
-<button routerLink="" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">home</button>
-<a routerLink="sections" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">syncro</a>
-<app-theme-mode />
-<app-fullscreen />
-<a class="icon-box" (click)="toggleSidenav()">
-  @if (sidenavService.sidenavSignal() === 'close') {
-  open
-  } @else {
-  close
-  }
-</a> -->
-
-
 <nav class="nav-menu {{device}}">
   @if ( device === 'desktop' || device === 'mobile') {
   <strong>
@@ -37,18 +11,12 @@
     <a routerLink="sections" routerLinkActive="router-link-active"
       [routerLinkActiveOptions]="{ exact: true }">navigation</a>
   </strong>
-
-
-
   <strong>
     <app-theme-mode />
-
   </strong>
-
   <strong>
     <app-fullscreen />
   </strong>
-
   }
   <strong>
     <a class="icon-box" (click)="toggleSidenav()">
