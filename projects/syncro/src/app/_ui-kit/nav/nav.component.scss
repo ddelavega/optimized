@@ -10,6 +10,21 @@
     line-height: var(--header-height);
 
     padding: 0 1rem;
+    @media (max-width: 873px) {
+      display: none;
+      &.menu-bar {
+        display: initial;
+      }
+    }
+    @media (min-width: 874px) {
+      &.menu-bar {
+        display: none;
+        &.fullscreen,
+        &.lighttheme {
+          display: initial;
+        }
+      }
+    }
     // background-color: yellow;
     a {
       background-color: #333;
@@ -38,6 +53,9 @@
   &.mobile {
     strong {
       display: block;
+      &.menu-bar {
+        display: none;
+      }
     }
   }
 }

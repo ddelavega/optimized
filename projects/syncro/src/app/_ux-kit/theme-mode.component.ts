@@ -18,6 +18,7 @@ import { ThemeService } from '../_services';
   styles: `// Color of icon
   a{
     cursor: pointer;
+    color: var(--dark-color-primary);
   }
   .night {
   text-shadow: 0rem 0rem 10px rgba(0, 255, 255, 1);

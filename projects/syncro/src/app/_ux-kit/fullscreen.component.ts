@@ -17,6 +17,8 @@ import { MatIcon } from '@angular/material/icon';
   styles: `
   a{
     cursor: pointer;
+    color: var(--dark-color-primary);
+
   }`
 })
 export class FullscreenComponent implements OnInit {
