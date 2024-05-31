@@ -18,4 +18,7 @@ export class NavComponent {
   toggleSidenav() {
     this.sidenavService.updateNavStatus();
   }
+  getClass() {
+    return 'active';
+  }
 }

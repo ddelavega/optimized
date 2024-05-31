@@ -1,16 +1,13 @@
 <nav class="nav-menu {{device}}">
   <!-- @if ( device === 'desktop' || device === 'mobile') { -->
   <strong>
-    <a routerLink="" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">home</a>
+    <a routerLinkActive="{{ getClass() }}" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">home</a>
   </strong>
   <strong>
-    <a routerLink="sections" routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }">sections</a>
+    <a routerLinkActive="{{ getClass() }}" [routerLinkActiveOptions]="{ exact: true }"
+      routerLink="sections">sections</a>
   </strong>
-  <strong>
-    <a routerLink="sections" routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }">navigation</a>
-  </strong>
+
   <strong class="menu-bar lighttheme">
     <app-theme-mode />
   </strong>
