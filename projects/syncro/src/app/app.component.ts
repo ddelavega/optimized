@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { SidenavService, ThemeService } from './_services';
-import { FullscreenComponent, ThemeModeComponent } from './_ux-kit';
+import { FullscreenComponent, ThemeModeComponent, routerAnimation } from './_ux-kit';
 import { NavComponent } from './_ui-kit';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -10,7 +10,9 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [RouterOutlet, NavComponent, RouterLink, RouterLinkActive, MatButtonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  animations: [routerAnimation]
+
 })
 export class AppComponent {
   title = 'syncro';
@@ -19,5 +21,9 @@ export class AppComponent {
 
   toggleSidenav() {
     this.sidenavService.updateNavStatus();
+  }
+
+  onActivate(e: any, scrollContainer: { scrollTop: number; }) {
+    scrollContainer.scrollTop = 0;
   }
 }

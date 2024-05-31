@@ -11,8 +11,9 @@
       <app-nav [device]="'desktop'" />
     </div>
   </header>
-  <section class="main-section" (click)="sidenavService.setNavStatus('close')">
-    <router-outlet />
+  <section [@routerAnimation]="o.isActivated ? o.activatedRoute : ''" class="router-animate main-section"
+    #scrollContainer (click)="sidenavService.setNavStatus('close')">
+    <router-outlet #o="outlet" (activate)="onActivate($event, scrollContainer)" />
     <section class="content">
 
       <h2>demo works!</h2>

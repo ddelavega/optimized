@@ -53,6 +53,9 @@ html {
     transition: 0.6s;
     color: var(--light-color-primary);
     background-color: #f5f5f5;
+    // .main-section {
+    //   background-color: red;
+    // }
     .contact {
       color: #f5f5f5;
     }
@@ -73,6 +76,9 @@ html {
     transition: 0.6s;
     color: var(--dark-color-primary);
     background-color: $semi-dark-bg-color;
+    // .main-section {
+    //   background-color: $semi-dark-bg-color;
+    // }
     .default {
       background-color: var(--light-bg-color);
     }
