@@ -15,7 +15,6 @@
     #scrollContainer (click)="sidenavService.setNavStatus('close')">
     <router-outlet #o="outlet" (activate)="onActivate($event, scrollContainer)" />
     <section class="content">
-
       <h2>demo works!</h2>
       <img src="./images/reload.jpg" alt="sample">
       <button mat-button>hola</button>
@@ -30,5 +29,6 @@
   <div class="sidenav" [class]="sidenavService.sidenavSignal()">
     <app-nav />
   </div>
+
 </div>
 <!-- (click)="sidenavService.setNavStatus('open')" -->

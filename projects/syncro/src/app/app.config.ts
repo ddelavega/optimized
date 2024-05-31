@@ -8,22 +8,23 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }),
-  provideRouter(
-    routes,
-    withComponentInputBinding(),
-    withViewTransitions(),
-    withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
-  ),
-  // provideExperimentalCheckNoChangesForDebug(
-  //   {
-  //     interval: 1000,
-  //     useNgZoneOnStable: true,
-  //     exhaustive: true
-  //   }
-  // ),
-  provideClientHydration(), provideAnimationsAsync(), provideServiceWorker('ngsw-worker.js', {
-    enabled: !isDevMode(),
-    registrationStrategy: 'registerWhenStable:30000'
-  })]
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(
+      routes,
+      withComponentInputBinding(),
+      withViewTransitions(),
+      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
+    ),
+    // provideExperimentalCheckNoChangesForDebug(
+    //   {
+    //     interval: 1000,
+    //     useNgZoneOnStable: true,
+    //     exhaustive: true
+    //   }
+    // ),
+    provideClientHydration(), provideAnimationsAsync(), provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000'
+    })]
 };
