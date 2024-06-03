@@ -79,7 +79,7 @@ import { Component, Input } from '@angular/core';
 @keyframes typing {
   40%,
   60% {
-    left: calc(100% + 20px);
+    left: calc(100% + 1rem);
   }
   100% {
     left: 0;
