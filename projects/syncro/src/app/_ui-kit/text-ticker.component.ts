@@ -21,12 +21,13 @@ import { Component, Input } from '@angular/core';
   styles: `
   .wrapper__ticker {
   display: grid;
-  grid-template-columns: var(--services-blocks-width);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   align-items: center;
   background-color: #88d8d0;
   padding: 1rem 0;
   margin-block: 4rem;
   text-align: center;
+  justify-items: center;
 }
 .wrapper__ticker .static-txt {
   color: #333;
@@ -35,18 +36,18 @@ import { Component, Input } from '@angular/core';
   // font-weight: bold;
 }
 .wrapper__ticker .dynamic-txts {
-  margin-left: 15px;
+  // margin-left: 15px;
   height: 90px;
   line-height: 90px;
   overflow: hidden;
-  align-self: auto;
+  align-self: center;
 }
 .dynamic-txts li {
   list-style: none;
   color: #562b5c;
   height: 90px;
 
-  font-size: clamp(1.6rem, 14vw, 1.8rem);
+  font-size: clamp(1.4rem, 10vw, 1.6rem);
   // font-weight: bold;
   position: relative;
   line-height: 90px;
@@ -83,7 +84,8 @@ import { Component, Input } from '@angular/core';
   100% {
     left: 0;
   }
-}`
+}
+`
 })
 export class TextTickerComponent {
   @Input() dynamics: string[] = [];
