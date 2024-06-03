@@ -69,6 +69,9 @@ html {
       background-color: #32b8b8;
       background: linear-gradient(90deg, rgba(241, 241, 241, 0) 0%, #32b8b8 100%);
     }
+    .btn-custom-rounded {
+      color: var(--light-color-primary);
+    }
   }
   .dark {
     @include mat.core-theme($dark-theme);

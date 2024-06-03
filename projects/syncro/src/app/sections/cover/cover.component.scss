@@ -1,0 +1,10 @@
+.btn-custom-rounded {
+  border: 1px solid rgba(#32b8b8, 1);
+  transition: 0.3s;
+  // margin-right: 0.5rem;
+}
+.button-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 0.5rem;
+}

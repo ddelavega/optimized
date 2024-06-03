@@ -14,6 +14,7 @@
   <section [@routerAnimation]="o.isActivated ? o.activatedRoute : ''" class="router-animate main-section"
     #scrollContainer (click)="sidenavService.setNavStatus('close')">
     <router-outlet #o="outlet" (activate)="onActivate($event, scrollContainer)" />
+    <!--
     <section class="content">
       <h2>demo works!</h2>
       <img src="./images/reload.jpg" alt="sample">
@@ -24,7 +25,7 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis cum asperiores sunt aspernatur id deserunt
         consequatur quibusdam nesciunt magnam ea. Autem totam officia cum, doloribus fuga alias ullam aut a.
       </section>
-    </section>
+    </section> -->
   </section>
   <div class="sidenav" [class]="sidenavService.sidenavSignal()">
     <app-nav />

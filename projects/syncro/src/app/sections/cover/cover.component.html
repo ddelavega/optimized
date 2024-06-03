@@ -1,0 +1,55 @@
+<div class="content">
+  <div class="container__main__block">
+
+    <div class="container__blocks container__block__img">
+      <div class="container__block">
+        <div class="container__content">
+
+          <h2 class="title balanced main-titles">
+            Front End Developer |
+            Web Designer
+          </h2>
+
+          <p>
+            Hola, mi nombre es Diego de la Vega, soy Desarrollador Front End además de Dieseñador Web, fulltime y
+            freelance con base
+            en Buenos Aires, Argentina.
+          </p>
+          <p>
+
+            A través de un diseño pensado y elaborado, ofrezco experiencias excepcionales que ayudan a las empresas a
+            crecer y a las
+            marcas ofrecer una imagen mas pulida.
+          </p>
+          <p class="button-controls">
+
+            <button mat-button class="btn-custom-rounded">
+              Algunos de mis skills
+              <span class="icon-box">
+                <i class="icon ico-chevron-down"></i>
+              </span>
+            </button>
+            <button mat-button class="btn-custom-rounded">
+              Algunos de mis trabajos
+              <span class="icon-box">
+                <i class="icon ico-external-link-out"></i>
+              </span>
+
+            </button>
+          </p>
+
+        </div>
+      </div>
+      <div class="container__block">
+        <div class="container__content">
+          <app-responsive-container-img [src]="'pictures/profile-front.jpg'" />
+
+
+        </div>
+      </div>
+    </div>
+
+    <app-text-ticker [dynamics]="dynamicsWorks" [class]="'oceanic'" [texts]="'Posiciones cubiertas:'" />
+
+  </div>
+</div>
