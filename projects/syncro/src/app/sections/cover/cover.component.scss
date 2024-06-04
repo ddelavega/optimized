@@ -8,3 +8,27 @@
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
   gap: 0.5rem;
 }
+
+// USED FOR STARS section
+.divide {
+  display: grid;
+  // background-color: red;
+  max-width: 100;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+
+  h3 {
+    strong {
+      font: inherit;
+      font-size: clamp(0.9em, 1.4em, 1em);
+    }
+    // border-right: 3px solid #32b8b8;
+    // background-color: #32b8b8;
+    // background: linear-gradient(90deg, rgba(241, 241, 241, 0.2) 0%, #32b8b8 100%);
+    padding: 0.8rem 0.5rem;
+    // text-align: right;
+  }
+  .skill__block {
+    display: block;
+    // background-color: green;
+  }
+}

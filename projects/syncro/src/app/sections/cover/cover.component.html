@@ -23,7 +23,7 @@
           </p>
           <p class="button-controls">
 
-            <button mat-button class="btn-custom-rounded">
+            <button mat-button class="btn-custom-rounded" (click)="clickToScroll('skills')">
               Algunos de mis skills
               <span class="icon-box">
                 <i class="icon ico-chevron-down"></i>
@@ -50,6 +50,66 @@
     </div>
 
     <app-text-ticker [dynamics]="dynamicsWorks" [class]="'oceanic'" [texts]="'Posiciones cubiertas:'" />
+
+    <div class="container__blocks container__block__inside" id="skills">
+      <div class="container__block">
+        <div class="container__content">
+
+          <app-responsive-container-img [src]="'pictures/lg-secuence-01.jpg'" />
+
+          <!-- @if(isShowing){
+          <br>
+          <app-responsive-container-img [src]="'pictures/lg-secuence-02.jpg'" />
+          <br>
+          } -->
+
+          <h2 class="title balanced adapted-titles">
+            Detalle
+          </h2>
+          <!-- <div class="text-starts"> -->
+          <p>
+            Programas de edición de imágenes, vectores, prototipado, wireframes y bocetado.
+          </p>
+          <p>
+            Código, lenguajes, maquetado.
+          </p>
+          <p>
+            Editores de texto.
+          </p>
+          <p>
+            Editores de video, plataformas adserver, aws.
+          </p>
+
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="container__block skills">
+        <div class="container__content">
+          <h2 class="title balanced main-titles">Skills</h2>
+          <div class="divide">
+
+            @for (env of details; track env.index) {
+            <div class="skill__block">
+              @for (it of env.items; track $index) { @if($index==0) {
+              <h3 class="title-small anim-border">
+                <strong>
+                  {{env.title}}
+
+                </strong>
+              </h3>
+              }
+              <app-tech-rating [tech]="it.tech" [rating]="it.rating"></app-tech-rating>
+
+
+              }
+            </div>
+            }
+
+
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>

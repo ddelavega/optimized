@@ -1,11 +1,20 @@
-.main-container {
-  width: 100%;
-  background-color: aquamarine;
+.main__container {
+  display: grid;
+  position: absolute;
+  background: var(--bg-color);
+  // background: #fff;
+  inset: 0;
+  grid-template-rows: 5rem 1fr;
+  // .onlyLogin {
+  //   display: none;
+  // }
 }
 .main-header {
   background-color: #32b8b8;
   height: var(--header-height);
   position: sticky;
+  grid-row: 1;
+
   display: grid;
   grid-template-columns: var(--logo-width) auto;
   .logo {
@@ -48,10 +57,18 @@
     transition: 0.3s;
   }
 }
-
+.main__body {
+  display: grid;
+  grid-row: 2;
+  max-height: calc(100vh - 5rem);
+  overflow: hidden;
+  overflow-y: auto;
+}
 .main-section {
-  height: var(--main-section-height);
   position: relative;
+  height: var(--main-section-height);
+  grid-row: 2;
+
   grid-template-columns: 1fr;
   overflow: hidden;
   overflow-y: auto;

@@ -67,15 +67,15 @@ export const routerAnimation = trigger('routerAnimation', [
   transition('* <=> *', [
     style({ position: 'relative' }),
     query('.router-animate', animateChild(), { optional: true }),
-    // query(':enter, :leave', [
-    //   style({
-    //     position: 'absolute',
-    //     top: 0,
-    //     left: 0,
-    //     right: 0,
-    //     width: '100%'
-    //   })
-    // ], { optional: true }),
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
     query(':enter', [style({ opacity: 0 })], { optional: true }),
     query(':leave', animateChild(), { optional: true }),
     group([
