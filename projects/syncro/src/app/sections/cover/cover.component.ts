@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { ResponsiveContainerImgComponent } from '../../_ux-kit';
-import { ScrollsService, SeoPwaOptionsService } from '../../_services';
+import { BreakpointsService, ScrollsService, SeoPwaOptionsService, SidenavService } from '../../_services';
 import { TextTickerComponent, TechRatingComponent } from '../../_ui-kit';
 
 @Component({
@@ -165,6 +165,9 @@ export class CoverComponent {
 
   seoPwaOptionService: SeoPwaOptionsService = inject(SeoPwaOptionsService)
   scrollsService: ScrollsService = inject(ScrollsService);
+  sidenavService: SidenavService = inject(SidenavService);
+  breakpointsService: BreakpointsService = inject(BreakpointsService);
+
   yearsSince = this.seoPwaOptionService.yearsSince;
 
   getClass() {
@@ -175,4 +178,5 @@ export class CoverComponent {
     console.log(targetId);
     this.scrollsService.scrollToTarget(targetId);
   }
+
 }

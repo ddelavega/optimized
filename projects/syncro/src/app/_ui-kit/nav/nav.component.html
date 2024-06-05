@@ -1,5 +1,8 @@
 <nav class="nav-menu {{device}}">
-  {{results1$ | async | json}}
+  @if(!isSmallScreen && isMediumScreen) {
+  se ve
+  }
+
   @if ( !isSmallScreen || device === 'mobile') {
   <strong>
     <a routerLinkActive="{{ getClass() }}" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">home</a>

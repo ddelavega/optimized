@@ -8,6 +8,7 @@
           <h2 class="title balanced main-titles">
             Front End Developer |
             Web Designer
+
           </h2>
 
           <p>
@@ -57,11 +58,11 @@
 
           <app-responsive-container-img [src]="'pictures/lg-secuence-01.jpg'" />
 
-          <!-- @if(isShowing){
+          @if (breakpointsService.screenSignal() === true){
           <br>
           <app-responsive-container-img [src]="'pictures/lg-secuence-02.jpg'" />
           <br>
-          } -->
+          }
 
           <h2 class="title balanced adapted-titles">
             Detalle
