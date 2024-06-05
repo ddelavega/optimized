@@ -2,13 +2,14 @@ import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { ResponsiveContainerImgComponent } from '../../_ux-kit';
-import { BreakpointsService, ScrollsService, SeoPwaOptionsService, SidenavService } from '../../_services';
-import { TextTickerComponent, TechRatingComponent } from '../../_ui-kit';
+import { ScrollsService, SeoPwaOptionsService, SidenavService, MetaService } from '../../_services';
+import { TechRatingComponent, TickerTapeComponent } from '../../_ui-kit';
+import { MetaContents } from '../../_contents/meta-contents';
 
 @Component({
   selector: 'app-cover',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, ResponsiveContainerImgComponent, MatButtonModule, TextTickerComponent, TechRatingComponent],
+  imports: [RouterLink, RouterLinkActive, ResponsiveContainerImgComponent, MatButtonModule, TechRatingComponent, TickerTapeComponent],
   templateUrl: './cover.component.html',
   styleUrl: './cover.component.scss'
 })
@@ -41,7 +42,7 @@ export class CoverComponent {
     'Lenguajes.',
     'Plataformas adserver.',
     'Bocetado.',
-    'AWS.'
+    'AWS/S3.'
   ];
 
   details = [
@@ -163,12 +164,24 @@ export class CoverComponent {
     },
   ];
 
+  meta: MetaContents = new MetaContents();
+  cover = this.meta.coverMeta;
+
   seoPwaOptionService: SeoPwaOptionsService = inject(SeoPwaOptionsService)
   scrollsService: ScrollsService = inject(ScrollsService);
   sidenavService: SidenavService = inject(SidenavService);
-  breakpointsService: BreakpointsService = inject(BreakpointsService);
 
   yearsSince = this.seoPwaOptionService.yearsSince;
+
+  getMetaService: MetaService = inject(MetaService);
+
+  constructor() {
+
+
+    this.getMetaService.getMeta(this.cover.description, this.cover.description, this.cover.keywords);
+
+
+  }
 
   getClass() {
     return 'active';

@@ -49,8 +49,7 @@
         </div>
       </div>
     </div>
-
-    <app-text-ticker [dynamics]="dynamicsWorks" [class]="'oceanic'" [texts]="'Posiciones cubiertas:'" />
+    <app-ticker-tape [dynamics]="dynamicsWorks" [class]="'oceanic'" [texts]="'Posiciones cubiertas:'" />
 
     <div class="container__blocks container__block__inside" id="skills">
       <div class="container__block">
@@ -58,7 +57,7 @@
 
           <app-responsive-container-img [src]="'pictures/lg-secuence-01.jpg'" />
 
-          @if (breakpointsService.screenSignal() === true){
+          @if (sidenavService.screenSignal() === true){
           <br>
           <app-responsive-container-img [src]="'pictures/lg-secuence-02.jpg'" />
           <br>
@@ -111,6 +110,7 @@
         </div>
       </div>
     </div>
+    <app-ticker-tape [dynamics]="dynamicsManage" [class]="'lavander'" [texts]="'Tareas relizadas con:'" />
 
   </div>
 </div>

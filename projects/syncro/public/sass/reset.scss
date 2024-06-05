@@ -19,6 +19,8 @@
   --header-height: 5rem;
   --main-section-height: calc(100vh - var(--header-height));
   --logo-width: min(100%, 10rem);
+
+  --ticker: min(100%, 28rem);
 }
 
 html {

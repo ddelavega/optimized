@@ -13,4 +13,10 @@ export class SidenavService {
     console.log('update navStatus');
     this.sidenavSignal.update((value) => value === 'close' ? 'open' : 'close');
   }
+  screenSignal = signal<boolean>(false);
+
+  setBPStatus(value_1: boolean, value_2: boolean) {
+    const visible = !value_1 && value_2;
+    this.screenSignal.set(visible);
+  }
 }
