@@ -1,23 +1,25 @@
 <div class="main__container" [class]="themeService.themeSignal()">
-  <header class="main__header">
-    <!-- <div class="logo">
+  <header class="main-header">
+    <!--
+    <div class="logo">
       <strong>
         <a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
           {{title}}+
         </a>
       </strong>
-    </div> -->
+    </div>
+     -->
     <div class="main-navbar">
       <app-nav [device]="'desktop'" />
     </div>
   </header>
-  <!-- <div class="sidenav" [class]="sidenavService.sidenavSignal()">
-    <app-nav />
-  </div> -->
-  <section [@routerAnimation]="o.isActivated ? o.activatedRoute : ''" class="router-animate main-section"
-    #scrollContainer (click)="sidenavService.setNavStatus('close')">
-    <router-outlet #o="outlet" (activate)="onActivate($event, scrollContainer)" />
-    <!--
+  <div class="main__body" #scrollContainer>
+
+
+    <section [@routerAnimation]="o.isActivated ? o.activatedRoute : ''" class="router-animate main-section"
+      (click)="sidenavService.setNavStatus('close')">
+      <router-outlet #o="outlet" (activate)="onActivate($event, scrollContainer)" />
+      <!--
     <section class="content">
       <h2>demo works!</h2>
       <img src="./images/reload.jpg" alt="sample">
@@ -29,7 +31,11 @@
         consequatur quibusdam nesciunt magnam ea. Autem totam officia cum, doloribus fuga alias ullam aut a.
       </section>
     </section> -->
-  </section>
+    </section>
+  </div>
+  <div class="sidenav" [class]="sidenavService.sidenavSignal()">
+    <app-nav />
+  </div>
 
 </div>
 <!-- (click)="sidenavService.setNavStatus('open')" -->
