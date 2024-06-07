@@ -1,16 +1,19 @@
 <div class="main__container" [class]="themeService.themeSignal()">
-  <header class="main-header">
-    <div class="logo">
+  <header class="main__header">
+    <!-- <div class="logo">
       <strong>
         <a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
           {{title}}+
         </a>
       </strong>
-    </div>
+    </div> -->
     <div class="main-navbar">
       <app-nav [device]="'desktop'" />
     </div>
   </header>
+  <div class="sidenav" [class]="sidenavService.sidenavSignal()">
+    <app-nav />
+  </div>
   <section [@routerAnimation]="o.isActivated ? o.activatedRoute : ''" class="router-animate main-section"
     #scrollContainer (click)="sidenavService.setNavStatus('close')">
     <router-outlet #o="outlet" (activate)="onActivate($event, scrollContainer)" />
@@ -27,9 +30,6 @@
       </section>
     </section> -->
   </section>
-  <div class="sidenav" [class]="sidenavService.sidenavSignal()">
-    <app-nav />
-  </div>
 
 </div>
 <!-- (click)="sidenavService.setNavStatus('open')" -->
